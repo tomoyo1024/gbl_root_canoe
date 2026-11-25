@@ -23,10 +23,10 @@ ksud module config set user_lang "$LANG" 2>/dev/null
 sleep 1
 
 cat > "$MODPATH/module.prop" <<EOF
-id=fake_bl_efisp
+id=hypercanoe
 version=5.0
 versionCode=12
-author=zaomi
+author=Tomoyo
 EOF
 
 if [ "$LANG" = "zh" ]; then
@@ -305,6 +305,6 @@ while true; do
 done
 
 # ablrepo is bundled only for install-time ABL downgrade lookup. Remove it so
-# the device-side module dir (/data/adb/modules/fake_bl_efisp) stays lean after
+# the device-side module dir (/data/adb/modules/hypercanoe) stays lean after
 # installation; the cloud URL remains available for later re-downloads.
 rm -rf "$MODPATH/ablrepo"
